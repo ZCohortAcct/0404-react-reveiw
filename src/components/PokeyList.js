@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Pokemon from './Pokemon'
 
-// need to pass down a prop from app
-// copy past code from app (displaying pokey name functionality)
-function PokeyList({pokemon}) {
-  const pokemonArr = pokemon.map(obj => {
-    // debugger
-  return ( < Pokemon pokemonName={obj.name}/>
 
-    // <div className="task"> 
-    //   {obj.name}
-    // </div>
-    )
+function PokeyList({pokemon}) {
+  // what should be stored in state ~> entire collection of pokeyObjs
+  // set____ is to be used when you need to UPDATE / SET the state
+  const [pokeyObjsArr, setPokeyObjsArr] = useState(pokemon)
+
+  const removePokey = (nameOfPokemon) => {
+    // console.log(nameOfPokemon)
+    // const updatedArr = pokeyObjsArr.filter( (pokeyObj) => {
+    //  // return a collection of objs that MATCH or do NOT match conditonal
+    //   // do NOT want pokeyObj NAME to match our INPUT
+    //   // CONDITIONAL SYNTX: comparions txt OPERATOR comparions txt
+    //   return pokeyObj.name !== nameOfPokemon
+    // })
+
+    setPokeyObjsArr(pokeyObjsArr.filter((pokeyObj) => pokeyObj.name !== nameOfPokemon))
+    // setPokeyObjsArr(preArr => preArr = updatedArr)
+    // setPokeyObjsArr(updatedArr)
+    // console.log(updatedArr)
+  }
+  
+  const pokemonArr = pokeyObjsArr.map(obj => {
+  return ( < Pokemon pokemonName={obj.name} removePokemon={removePokey} key={obj.name}/>)
   })
+
 
   return (
     <div className="tasks">
