@@ -29,3 +29,4 @@
   - Setting up a controlled form
   - Updated the state from user input
   - Updated DOM content once form is submitted
+- Persist created Pokemon to DB

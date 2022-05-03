@@ -193,3 +193,42 @@ button.toggle:focus {
     transform: scale(20);
   }
 }
+
+.form-content h3 {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-content input, .form-content select {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8D8D8D;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.form-content button {
+  background: lightcyan;
+  color: blue;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  border: solid #cbcbff 0.15rem;
+  border-radius: 0.25rem;
+}
+
+.form-content button:hover, .form-content button:focus, .form-content button:active{
+  background-color: yellow;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none;
+}

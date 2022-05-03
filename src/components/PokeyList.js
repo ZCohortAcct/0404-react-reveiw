@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Pokemon from './Pokemon'
+import PokeyFilter from "./PokeyFilter";
+import NewPokeyForm from "./NewPokeyForm";
+
 
 
 function PokeyList({pokemon}) {
@@ -17,6 +20,7 @@ function PokeyList({pokemon}) {
     // })
 
     setPokeyObjsArr(pokeyObjsArr.filter((pokeyObj) => pokeyObj.name !== nameOfPokemon))
+    debugger
     // setPokeyObjsArr(preArr => preArr = updatedArr)
     // setPokeyObjsArr(updatedArr)
     // console.log(updatedArr)
@@ -28,12 +32,16 @@ function PokeyList({pokemon}) {
 
 
   return (
-    <div className="tasks">
-      From PokeyList
-      
-      {pokemonArr}
+    <>
+      <div className="tasks">
+      <PokeyFilter />
+        From PokeyList
+        
+        {pokemonArr}
 
-    </div>
+      </div>
+      <NewPokeyForm />
+    </>
   )
 }
 
