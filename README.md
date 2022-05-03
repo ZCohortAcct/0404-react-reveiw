@@ -14,7 +14,7 @@
   - Understand where key's & value's are set 
   - Iterating on props
   
-# Learning Goals Friday, 05/02
+# Learning Goals Monday, 05/02
 
 - STATE
   - Setting Up state
@@ -22,11 +22,14 @@
   - Updateding state 
 
 
-# Learning Goals Friday, 05/03
+# Learning Goals Tuesday, 05/03
 - Filter
   - Update the DOM based on a user input from a filter form 
 - Using state with form's
   - Setting up a controlled form
   - Updated the state from user input
   - Updated DOM content once form is submitted
+
+# Learning Goals Wed, 05/04
+- Review State with Forms
 - Persist created Pokemon to DB
