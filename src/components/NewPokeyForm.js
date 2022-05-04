@@ -50,9 +50,8 @@ function NewPokeyForm({onSubmitNewForm}) {
       body: JSON.stringify(pokeyFromForm),
     })
       .then((r) => r.json())
-      .then(savedObj => onSubmitNewForm(savedObj))
-
-    // onSubmitNewForm(pokeyFromForm)
+      // .then(savedObj => onSubmitNewForm(savedObj))
+      .then(onSubmitNewForm)
 
   }
 

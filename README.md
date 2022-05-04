@@ -30,6 +30,14 @@
   - Updated the state from user input
   - Updated DOM content once form is submitted
 
-# Learning Goals Wed, 05/04
+# Learning Goals Wednesday, 05/04
 - Review State with Forms
 - Persist created Pokemon to DB
+- Refactor code & component Hierarchy, to make utitlze App as a the central component
+  - add useEffect hook to Dynamically fetch data from db.json file
+    - start server with `json-server --watch db.json `
+
+# Learning Goals Thursday, 05/05
+- Review code & QnA
+- Perisist removal of pokemon
+- Complete 'More Details'  functionality  
