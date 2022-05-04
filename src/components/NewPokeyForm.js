@@ -42,7 +42,17 @@ function NewPokeyForm({onSubmitNewForm}) {
       base_experience: formData.pokeyBaseExperience
     }
 
-    onSubmitNewForm(pokeyFromForm)
+    fetch("http://localhost:3000/pokemon", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(pokeyFromForm),
+    })
+      .then((r) => r.json())
+      .then(savedObj => onSubmitNewForm(savedObj))
+
+    // onSubmitNewForm(pokeyFromForm)
 
   }
 
