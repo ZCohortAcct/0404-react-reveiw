@@ -11,19 +11,21 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/pokemon')
+    fetch('http://localhost:3004/pokemon')
     .then(resp => resp.json())
     .then(pokemonObjs => setPokemon(pokemonObjs))
     // .then(setPokemon)
   }, [])
   
   const removePokemonFromList = (pokemonId) => { // update to work with id, instead of names
+
+    // add persistance code 
     setPokemon(
       pokemon.filter((pokeyObj) => pokeyObj.id !== pokemonId)
     )
   }
 
-  const filteredPokeyData = pokemon.filter(pokeyObj =>  pokeyObj.name.toLowerCase().includes(filterInput.toLowerCase()))
+  // const filteredPokeyData = pokemon.filter(pokeyObj =>  pokeyObj.name.toLowerCase().includes(filterInput.toLowerCase()))
 
   const handlePokeyCreation = (newPokemon) => {
     // copy the list the list of pokemon & add new pokemon
@@ -36,11 +38,11 @@ function App() {
   return (
     <div className="App">
       <h2>Check these Pokemon!</h2>
-      <PokeyFilter 
+      {/* <PokeyFilter 
         filterInputFromList={filterInput} 
         setFilterInput={setFilterInput}
-      />
-      <PokeyList pokeyArr={filteredPokeyData} removePokey={removePokemonFromList} />
+      /> */}
+      <PokeyList pokeyArr={pokemon} removePokey={removePokemonFromList} />
       <NewPokeyForm onSubmitNewForm={handlePokeyCreation}/>
     </div>
   );
